@@ -37,7 +37,8 @@ function jumpScare(){
   animation.style.height = '500px';
   animation.style.top = '200px'
   animation.style.zIndex = '20';
-  let gb = document.getElementById("gibbixbehaelter");
+  animation.id = "explosion"
+  let gb = document.getElementById("keksplosion");
   gb.appendChild(animation);
   let autio = document.getElementById("kekw")
   autio.autoplay="true";
@@ -47,13 +48,13 @@ function jumpScare(){
 function rotate(image, z) {
   
   image.setAttribute("style", "transform: rotate(" + rotateAngle + "deg);"
-  + "top: " + topp+ "px;"+"left: " + left+ "px;"+ "width:500px;"
-  + "z-index:" + z);
+  + "top: " + topp+ "%;"+"left: " + left+ "%;"+ "width:100%;"
+  + "z-index:" + z +" ; position: absolute;  transition: all 0.1s;");
   
   const getRandom = max => {
       return Math.floor(Math.random() * max) - max / 2;
   };
   rotateAngle = rotateAngle + getRandom(200);
-  topp = getRandom(200)+200;
-  left = getRandom(200)+500;
+  topp = getRandom(50);
+  left = getRandom(50);
 }

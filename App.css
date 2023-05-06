@@ -2,8 +2,29 @@ body{
   background-image: url(img/top_edit.jpg); 
   background-size: 100%;
   background-repeat: no-repeat;
+  height: 100%;
 }
-img{
+/*img{
   position: absolute;
   transition: all 0.1s;
+}*/
+
+html {
+  height: 100%;
+}
+
+#gibbixbehaelter{
+  left: 30%;
+  top: 30%;
+  width: 30%;
+  height: 30%;
+  position: relative;
+}
+
+#kekw, #infra{
+  position: absolute;
+  top: 0;
+}
+#kekw, #explosion #keksplosion{
+  left: 0;
 }
