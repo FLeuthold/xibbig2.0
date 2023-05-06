@@ -47,7 +47,7 @@ function jumpScare(){
 function rotate(image, z) {
   
   image.setAttribute("style", "transform: rotate(" + rotateAngle + "deg);"
-  + "top: " + topp+ "px;"+"left: " + left+ "px;"+ "width:300px;"
+  + "top: " + topp+ "px;"+"left: " + left+ "px;"+ "width:500px;"
   + "z-index:" + z);
   
   const getRandom = max => {
