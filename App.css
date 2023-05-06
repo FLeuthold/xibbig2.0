@@ -1,0 +1,8 @@
+body{
+  background-image: url(img/top.jpg); 
+
+}
+img{
+  position: absolute;
+  transition: all 0.1s;
+}
