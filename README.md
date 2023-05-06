@@ -8,3 +8,8 @@ download nodejs from nodejs.org
 go to the xibbig/ folder ("cd xibbig/")
 run "npm install"
 run "npm start"
+
+----------------
+Edit 2 :
+
+This page no longer needs nodejs, it's now client-side javascript only.
