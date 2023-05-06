@@ -3,25 +3,21 @@ let left = 90;
 let topp = 90;
 let zehntner = 1;
 let infraX = 0;
-let infraDX = 5;
+let infraDX = 50;
 
 infra.setAttribute("style","zIndex: -30 ")
 setInterval(mooveit,40, infra);
-for (let i = 0; i < 5; i++) {
+for (let i = 0; i < 10; i++) {
   setTimeout(addSmartlearn, i * 1000, i);
 }
 setTimeout(jumpScare, 11*1000)
 
-
-
-
-
 function mooveit(infra){
       if (infraX > document.documentElement.offsetWidth - infra.clientWidth) {
-        infraDX= - 5
+        infraDX= - 50
       }
       if (infraX < -1) {
-        infraDX= 5
+        infraDX= 50
       }
       infraX = infraX+infraDX;
       infra.setAttribute("style","zIndex: -30;left:"+infraX+"px;")
@@ -32,7 +28,7 @@ function addSmartlearn(i){
   dymimg.src = "img/smartlearn_alpha.png";
   let gb = document.getElementById("gibbixbehaelter");
   gb.appendChild(dymimg);
-  let inti=  setInterval(rotate,100, dymimg, i);
+  let inti=  setInterval(rotate,40, dymimg, i);
 }
 
 function jumpScare(){
