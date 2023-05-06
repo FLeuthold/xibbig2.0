@@ -1,6 +1,7 @@
 body{
-  background-image: url(img/top.jpg); 
-
+  background-image: url(img/top_edit.jpg); 
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 img{
   position: absolute;
