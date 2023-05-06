@@ -28,7 +28,7 @@ function addSmartlearn(i){
   dymimg.src = "img/smartlearn_alpha.png";
   let gb = document.getElementById("gibbixbehaelter");
   gb.appendChild(dymimg);
-  let inti=  setInterval(rotate,40, dymimg, i);
+  let inti=  setInterval(rotate,100, dymimg, i);
 }
 
 function jumpScare(){
@@ -53,7 +53,7 @@ function rotate(image, z) {
   const getRandom = max => {
       return Math.floor(Math.random() * max) - max / 2;
   };
-  rotateAngle = rotateAngle + getRandom(50);
-  topp = getRandom(100)+200;
-  left = getRandom(100)+500;
+  rotateAngle = rotateAngle + getRandom(200);
+  topp = getRandom(200)+200;
+  left = getRandom(200)+500;
 }

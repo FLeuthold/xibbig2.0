@@ -6,11 +6,10 @@
     "configurations": [
 
         {
-            "type": "pwa-msedge",
+            "type": "msedge",
             "request": "launch",
             "name": "Launch Edge against localhost",
-            "url": "${workspaceFolder}/index.html",
-            //"webRoot": "${workspaceFolder}"
+            "url": "${workspaceFolder}/index.html"
         }
     ]
 }
