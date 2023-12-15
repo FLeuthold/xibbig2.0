@@ -1,60 +1,42 @@
-let rotateAngle = 90;
-let left = 90;
-let topp = 90;
-let zehntner = 1;
-let infraX = 0;
+let infraLeft = 5;
 let infraDX = 50;
 
-infra.setAttribute("style","zIndex: -30 ")
-setInterval(mooveit,40, infra);
+let leftOffset = 300;
+let topOffset = 300;
+let rotateAngle = 0;
+let width = 600;
+
+const getRandomInteger = max =>  Math.floor((Math.random() -.5 ) * max)
+
+
+setInterval(inframove,500)
+
+
 for (let i = 0; i < 10; i++) {
-  setTimeout(addSmartlearn, i * 1000, i);
-}
-setTimeout(jumpScare, 11*1000)
-
-function mooveit(infra){
-      if (infraX > document.documentElement.offsetWidth - infra.clientWidth) {
-        infraDX= - 50
-      }
-      if (infraX < -1) {
-        infraDX= 50
-      }
-      infraX = infraX+infraDX;
-      infra.setAttribute("style","zIndex: -30;left:"+infraX+"px;")
+  let xibbig = new Image()
+  xibbig.className = "xibbigge"
+  xibbig.src = "img/smartlearn_alpha.png"
+  xibbig.id = "xibbig" + i
+  xibbig.zIndex = i; 
+  gibbixbehaelter.appendChild(xibbig)
+  //TimerHandler (not EventHandler)
+  setInterval(gibbixmove,1000,xibbig.id)
 }
 
-function addSmartlearn(i){
-  let dymimg = new Image();
-  dymimg.src = "img/smartlearn_alpha.png";
-  let gb = document.getElementById("gibbixbehaelter");
-  gb.appendChild(dymimg);
-  let inti=  setInterval(rotate,100, dymimg, i);
+function inframove(){
+
+  let infra = document.getElementById("infra");
+  if (infraLeft  < -10 |  infraLeft > 800 + 10) {
+    infraDX = -infraDX
+  }
+  infraLeft = infraLeft + infraDX
+  infra.style.left = infraLeft + "px"
 }
 
-function jumpScare(){
-  const animation = new Image();
-  animation.src = "img/explosion.gif";
-  animation.style.height = '500px';
-  animation.style.top = '200px'
-  animation.style.zIndex = '20';
-  animation.id = "explosion"
-  let gb = document.getElementById("keksplosion");
-  gb.appendChild(animation);
-  let autio = document.getElementById("kekw")
-  autio.autoplay="true";
-  autio.play();
-}
+function gibbixmove(xibbigid) {
+  let xibbig = document.getElementById(xibbigid)
+  let rand =  getRandomInteger(50)
+  rotateAngle = rotateAngle + rand  
+  xibbig.style.transform = "rotate(" + (rotateAngle ) + "deg)"
 
-function rotate(image, z) {
-  
-  image.setAttribute("style", "transform: rotate(" + rotateAngle + "deg);"
-  + "top: " + topp+ "%;"+"left: " + left+ "%;"+ "width:100%;"
-  + "z-index:" + z +" ; position: absolute;  transition: all 0.1s;");
-  
-  const getRandom = max => {
-      return Math.floor(Math.random() * max) - max / 2;
-  };
-  rotateAngle = rotateAngle + getRandom(200);
-  topp = getRandom(50);
-  left = getRandom(50);
 }
